@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>hexo配置</title>
+    <link href="/2024/01/26/hexo%E9%85%8D%E7%BD%AE/"/>
+    <url>/2024/01/26/hexo%E9%85%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<p>[](<a href="https://fluid-dev.github.io/hexo-fluid-docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">https://fluid-dev.github.io/hexo-fluid-docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97</a></p><p>#####)</p><h5 id="更改主页照片"><a href="#更改主页照片" class="headerlink" title="更改主页照片"></a>更改主页照片</h5><p>更改_config.fluid.yml里面的</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">今天莫名hexo d报错：ssh: <span class="hljs-keyword">connect</span> <span class="hljs-keyword">to</span> host github.com port <span class="hljs-number">22</span>: <span class="hljs-keyword">Connection</span> timed <span class="hljs-keyword">out</span> fatal: Could <span class="hljs-keyword">not</span> <span class="hljs-keyword">read</span> <span class="hljs-keyword">from</span> remote repository.<br>尝试删除ssh密钥重新配置，大小写是否错误等还是不行<br><br>ssh -T git@github.com 也报错<br><br>最后解决方案：https://blog.csdn.net/nightwishh/article/details/<span class="hljs-number">99647545</span><br>在.ssh文件下面创建vim config<br>输入：<br>Host github.com<br><span class="hljs-keyword">User</span> 注册github的邮箱<br>Hostname ssh.github.com<br>PreferredAuthentications publickey<br>IdentityFile ~/.ssh/id_rsa<br>Port <span class="hljs-number">443</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>算法学习</title>
     <link href="/2024/01/24/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
     <url>/2024/01/24/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/</url>
@@ -74,19 +87,6 @@
     <url>/2023/12/08/%E6%B3%95%E8%AF%AD%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</url>
     
     <content type="html"><![CDATA[<h5 id="介绍："><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h5><p>印欧语罗曼语族 世界第5大语言</p><p>法语字母表：</p><p><a href="https://imgse.com/i/pi2uU5n"><img src="https://z1.ax1x.com/2023/12/08/pi2uU5n.png" alt="pi2uU5n.png"></a></p><ul><li>音素是最小的语音单位</li><li>法语共有36个音素，16个元音音素，17个辅音音素</li><li>法语的元音字母：AEIOUY</li><li>音标：salut [saly] merci[mεrsi]</li></ul>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>hexo配置</title>
-    <link href="/2023/12/07/hexo%E9%85%8D%E7%BD%AE/"/>
-    <url>/2023/12/07/hexo%E9%85%8D%E7%BD%AE/</url>
-    
-    <content type="html"><![CDATA[<p>[](<a href="https://fluid-dev.github.io/hexo-fluid-docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">https://fluid-dev.github.io/hexo-fluid-docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97</a></p><p>#####)</p><h5 id="更改主页照片"><a href="#更改主页照片" class="headerlink" title="更改主页照片"></a>更改主页照片</h5><p>更改_config.fluid.yml里面的</p>]]></content>
     
     
     
