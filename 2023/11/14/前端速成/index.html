@@ -1,0 +1,856 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="https://s11.ax1x.com/2024/01/06/pizCDoR.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lxy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="[TOC] 整体目标 了解大前端的概念以及前端的能力边界 了解掌握 Web 前端基础开发环境的使用 基本掌握前端工程搭建能力 基本掌握 React 框架开发技巧 熟悉Vue框架的开发技巧 基本掌握 Node.JS 开发技巧 成为具有全栈思维的程序员及架构师  前端经典面试题：输入URL后发生了什么？  浏览器渲染过程：DOM树构建 HTML、CS、JavaScriptDOM基本操作DOM（Docu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端速成">
+<meta property="og:url" content="http://example.com/2023/11/14/%E5%89%8D%E7%AB%AF%E9%80%9F%E6%88%90/index.html">
+<meta property="og:site_name" content="LXY的学习博客">
+<meta property="og:description" content="[TOC] 整体目标 了解大前端的概念以及前端的能力边界 了解掌握 Web 前端基础开发环境的使用 基本掌握前端工程搭建能力 基本掌握 React 框架开发技巧 熟悉Vue框架的开发技巧 基本掌握 Node.JS 开发技巧 成为具有全栈思维的程序员及架构师  前端经典面试题：输入URL后发生了什么？  浏览器渲染过程：DOM树构建 HTML、CS、JavaScriptDOM基本操作DOM（Docu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://z1.ax1x.com/2023/11/15/piY58nP.md.png">
+<meta property="article:published_time" content="2023-11-14T13:39:55.000Z">
+<meta property="article:modified_time" content="2023-11-30T03:21:40.094Z">
+<meta property="article:author" content="lxy">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://z1.ax1x.com/2023/11/15/piY58nP.md.png">
+  
+  
+  
+  <title>前端速成 - LXY的学习博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>LXY</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="前端速成"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-14 21:39" pubdate>
+          2023年11月14日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          65 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">前端速成</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>[TOC]</p>
+<h5 id="整体目标"><a href="#整体目标" class="headerlink" title="整体目标"></a>整体目标</h5><ol>
+<li>了解大前端的概念以及前端的能力边界</li>
+<li>了解掌握 Web 前端基础开发环境的使用</li>
+<li>基本掌握前端工程搭建能力</li>
+<li>基本掌握 React 框架开发技巧</li>
+<li>熟悉Vue框架的开发技巧</li>
+<li>基本掌握 Node.JS 开发技巧</li>
+<li>成为具有全栈思维的程序员及架构师</li>
+</ol>
+<p>前端经典面试题：输入URL后发生了什么？</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/piY58nP"><img src="https://z1.ax1x.com/2023/11/15/piY58nP.md.png" srcset="/img/loading.gif" lazyload alt="piY58nP.md.png" style="zoom:50%;" /></a></p>
+<p>浏览器渲染过程：DOM树构建</p>
+<h5 id="HTML、CS、JavaScript"><a href="#HTML、CS、JavaScript" class="headerlink" title="HTML、CS、JavaScript"></a>HTML、CS、JavaScript</h5><h5 id="DOM基本操作"><a href="#DOM基本操作" class="headerlink" title="DOM基本操作"></a>DOM基本操作</h5><p>DOM（Document Object Model — 文档对象模型）是用来呈现以及与任意 HTML 或 XML文档交互的API。</p>
+<p>我们可以通过js调用浏览器提供的API，进行DOM的创建、查询、删除、替换等操作，还可以监听DOM的操作（如鼠标点击、键盘输入）事件，让我们对用户的操作做出响应，如今借助于React之类的框架，我们在实际开发中已经很少需要直接操作DOM了，但是仍然有必要了解一下DOM的基本设计和常用操作。</p>
+<ul>
+<li><p>增查删改</p>
+</li>
+<li><p>DOM节点属性与方法</p>
+</li>
+<li><p>DOM生命周期</p>
+</li>
+</ul>
+<h5 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h5><p>常用事件：<br>• 文档事件，加载，卸载等。<br>• 鼠标，键盘，移动端触控，表单输入等用户交互事件<br>• 网络处理事件<br>• 其他：媒体事件，全屏等</p>
+<p>事件绑定的两种方法：</p>
+<ul>
+<li>方法1：onXXXEventName 作为DOM的属性，去掉属性相当于解绑事件</li>
+<li>方法2：addEventListener&#x2F;removeEventLister方法。一般建议用此方法。</li>
+</ul>
+<h5 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h5><p>事件委托的意义：<br>1.性能提升<br>2.子节点发生变化（增加或删除），不影响代码运行</p>
+<h5 id="BOM与浏览器API"><a href="#BOM与浏览器API" class="headerlink" title="BOM与浏览器API"></a>BOM与浏览器API</h5><p>BOM(browser object model–浏览器对象模型)，属于约定俗称，在各自浏览器中都有各自的实现，并没有统一的标准。但大多数的接口都是通用的。BOM提供了独立于内容而与浏览器窗口进行交互的对象，由于BOM主要用于管理窗口与窗口之间的通讯，因此其核心对象是window。BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性，常见的对象有：document、location、navigator、screen、history。</p>
+<h5 id="CSS中万物皆盒"><a href="#CSS中万物皆盒" class="headerlink" title="CSS中万物皆盒"></a>CSS中万物皆盒</h5><h6 id="Flex-布局-Grid-布局"><a href="#Flex-布局-Grid-布局" class="headerlink" title="Flex 布局 Grid 布局"></a>Flex 布局 Grid 布局</h6><h6 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h6><p>•使用Flex、Grid布局<br>• 媒体查询<br>• 响应式图片<br>• rem</p>
+<h5 id="Javascript-基础语法"><a href="#Javascript-基础语法" class="headerlink" title="Javascript 基础语法"></a>Javascript 基础语法</h5><ol>
+<li><p>变量 有三个关键字可以声明变量：var、let 和 const。</p>
+</li>
+<li><p>程序控制</p>
+</li>
+<li><p>函数 高阶函数 匿名函数 闭包</p>
+</li>
+<li><p>面向对象与原型链</p>
+</li>
+<li><p>对象代理 Proxy</p>
+<p>Proxy 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。<br>• 比defineProperty更强大。<br>• ES6新语法<br>• vue3双向绑定基于Proxy实现</p>
+</li>
+<li><p>异步编程</p>
+<p>异步通常用于处理一些耗时的操作，比如说IO、网络请求、耗时计算等，在早期处理异步时，我们通常会使用事件和回调来处理。常见的异步有，事件监听、setTimeout、setInterval等</p>
+</li>
+</ol>
+<p>Promise 就是用来解决异步回调问题而出现的解决方案。它让你能够把异步操作最终的成功返回值或者失败原因和相应的处理程序关联起来。</p>
+<p>一个 Promise 必然处于以下几种状态之一：<br>• 待定（pending）: 初始状态，既没有被兑现，也没有被拒绝。<br>• 已兑现（fulfilled）: 意味着操作成功完成。<br>• 已拒绝（rejected）: 意味着操作失败。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">//用 Promise 和 setTimeout 来封装一个异步请求面积的方法</span><br>fuction <span class="hljs-title function_">asyncArea</span>(<span class="hljs-params">length</span>)&#123;<br><span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve,reject</span>)=&gt;</span>&#123;<br><span class="hljs-title function_">setTimeout</span>(<span class="hljs-params">()=&gt;</span>)&#123;<br>           <span class="hljs-keyword">if</span> (length&gt;<span class="hljs-number">0</span>) <span class="hljs-title function_">resolve</span>(length*length)<br>           <span class="hljs-keyword">else</span> <span class="hljs-title function_">reject</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">`invalid length: <span class="hljs-subst">$&#123;length&#125;</span>`</span>))<br>&#125;,<span class="hljs-number">500</span>)<br>&#125;)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Promise 通过 then 来进行异步请求虽然改善了回调的问题，但还是不够优雅，好在现在我们可以<br>通过 async&#x2F;await 语法，使用串行的语法进行异步调用。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">async</span> fuction <span class="hljs-title function_">test_1</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">let</span> start = <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>()<br>    <span class="hljs-keyword">let</span> result_1=<span class="hljs-keyword">await</span> <span class="hljs-title function_">asyncArea</span>(<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">let</span> result_2=<span class="hljs-keyword">await</span> <span class="hljs-title function_">asyncArea</span>(result_1+<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">let</span> result_3=<span class="hljs-keyword">await</span> <span class="hljs-title function_">asyncArea</span>(result_2+<span class="hljs-number">1</span>)<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;test_1&#x27;</span>,result_3)<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`cost <span class="hljs-subst">$&#123;<span class="hljs-built_in">Date</span>.now()-start&#125;</span>ms`</span>)<br>&#125;<br><span class="hljs-title function_">test_1</span>()<br><br><span class="hljs-keyword">async</span> fuction <span class="hljs-title function_">test_2</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">let</span> start = <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>()<br>    <span class="hljs-keyword">let</span> result=<span class="hljs-keyword">await</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>([<br>        <span class="hljs-title function_">asyncArea</span>(<span class="hljs-number">1</span>),<br>        <span class="hljs-title function_">asyncArea</span>(<span class="hljs-number">2</span>),<br>        <span class="hljs-title function_">asyncArea</span>(<span class="hljs-number">3</span>),<br>        <span class="hljs-title function_">asyncArea</span>(<span class="hljs-number">4</span>),<br>        <span class="hljs-title function_">asyncArea</span>(<span class="hljs-number">5</span>)<br>    ])<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;test_2&#x27;</span>,result)<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`cost <span class="hljs-subst">$&#123;<span class="hljs-built_in">Date</span>.now()-start&#125;</span>ms`</span>)<br>&#125;<br><span class="hljs-title function_">test_2</span>()<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">async</span> fuction <span class="hljs-title function_">run</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-keyword">try</span>&#123;<br>        <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> <span class="hljs-title function_">asyncArea</span>(-<span class="hljs-number">1</span>)<br>        cnsole.<span class="hljs-title function_">log</span>(result)<br>    &#125;<span class="hljs-keyword">catch</span>(error)&#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(error.<span class="hljs-property">message</span>)<br>    &#125;<br>    <br>    <span class="hljs-keyword">try</span>&#123;<br>        <span class="hljs-title function_">asyncArea</span>(-<span class="hljs-number">1</span>)<br>    &#125;<span class="hljs-keyword">catch</span>(error)&#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(error.<span class="hljs-property">message</span>)<br>    &#125;<br>    <br>    <span class="hljs-keyword">try</span>&#123;<br>        <span class="hljs-title function_">asyncArea</span>(-<span class="hljs-number">1</span>).<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span>&#123;<br>            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">1</span>,error.<span class="hljs-property">message</span>)<br>        &#125;) <br>    &#125;<span class="hljs-keyword">catch</span>(error)&#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">2</span>,error.<span class="hljs-property">message</span>)<br>    &#125;<br>&#125;<br><span class="hljs-title function_">run</span>()<br></code></pre></td></tr></table></figure>
+
+<p>常见对象及其API</p>
+<ol>
+<li>String</li>
+<li>Array</li>
+<li>Object</li>
+<li>Set</li>
+<li>Map</li>
+<li>JSON</li>
+<li>Math</li>
+<li>XMLHttpRequest</li>
+<li>Storage</li>
+<li>Error</li>
+</ol>
+<h5 id="前端工程化与Typescript"><a href="#前端工程化与Typescript" class="headerlink" title="前端工程化与Typescript"></a>前端工程化与Typescript</h5><p>在不使用模块系统的情况下，项目化变得难以维护。</p>
+<ul>
+<li>什么是前端工程化？</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">模块化、组件化、打包方案、自动化流程<br></code></pre></td></tr></table></figure>
+
+<p>最终目标:</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">高性能、稳定性<span class="hljs-comment">(reliability)</span>、可用性<span class="hljs-comment">(usability)</span>、可维护性<span class="hljs-comment">(maintainability)</span>、可访问性<span class="hljs-comment">(accesibility)</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>JS模块化</p>
+<ul>
+<li><p>CommonJs</p>
+<p>使用module.exports导出、require导入</p>
+</li>
+<li><p>EsModules</p>
+<p>可以使用export和export default,s使用import语法导入，单个导入必须使用花括号。</p>
+</li>
+</ul>
+</li>
+<li><p>Node.js与模块化</p>
+</li>
+</ul>
+<p>作为一个异步事件驱动的JavaScript运行时，Node.js被设计用来构建可扩展的网络应用。在下面的“Hello World”示例中，可以并发处理许多连接，每一个连接都会触发一个回调，而当没有可做的事情时，Node.js就会进入休眠状态。</p>
+<p>-<br>  包管理器npm安装</p>
+<ul>
+<li>安装node.js会自带</li>
+<li>npm中国镜像npm config set registry&#x3D;<a target="_blank" rel="noopener" href="https://registry.npmmirror.com/">https://registry.npmmirror.com</a>. </li>
+<li>npm config ls</li>
+<li>执行npm view react看下效果</li>
+<li>Node.js默认是CommonJs方案（因为先有Node.js，后有es6<br>分类：</li>
+<li>系统模块</li>
+<li>业务模块<ul>
+<li>社区三方模块</li>
+<li>自定义</li>
+</ul>
+</li>
+</ul>
+<p>Node.js是和Java&#x2F;Go&#x2F;C++一样，有文件，网络，系统等能力<br>Node.js主要应用场景:服务端开发(传统服务器，ServerLess)，本地工具开发，工程化工具开发Node.js模块化主要是CommonJs，也支持ESModule,未来ESModule也会是主流<br>npm不是唯一的包管理方式，还有pnpm,yarn</p>
+<h5 id="Webpack5学习"><a href="#Webpack5学习" class="headerlink" title="Webpack5学习"></a>Webpack5学习</h5><p>打包所有的资源</p>
+<ol>
+<li><strong>缓存问题（dist&#x2F;main.js 文件名固定）：</strong></li>
+</ol>
+<ul>
+<li>使用文件版本号：在每次文件内容变化时，可以在文件名中添加版本号或者哈希值，例如 <code>main.&lt;hash&gt;.js</code>，这样可以确保浏览器每次获取到的文件都是新的，从而避免缓存问题。</li>
+</ul>
+<ol start="2">
+<li><strong>模块化：引入 CSS 文件：</strong></li>
+</ol>
+<ul>
+<li>使用模块化打包工具：如果你使用类似 Webpack 的模块化打包工具，它们通常支持引入 CSS 文件，并能够将 CSS 文件打包到最终的输出文件中。你可以使用类似 <code>style-loader</code> 或 <code>css-loader</code> 这样的 loader 来处理 CSS 文件的导入和打包。</li>
+</ul>
+<ol start="3">
+<li><strong>模块化：引入 TypeScript 文件，如何编译：</strong></li>
+</ol>
+<ul>
+<li><pre><code class="hljs">TypeScript（TS）是一种由微软开发的开源编程语言，是 JavaScript 的超集，意味着所有有效的 JavaScript 代码也是有效的 TypeScript 代码。TypeScript 引入了静态类型检查，接口，类，命名空间等概念，以提高代码的可读性和维护性。
+ <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><br>- 使用 TypeScript 编译器：安装 TypeScript 并创建一个 `tsconfig.json` 文件，然后运行 `tsc` 命令，它将编译 TypeScript 文件为 JavaScript。你也可以使用类似 Webpack 的工具，配置相应的 loader 来处理 TypeScript 文件。<br><br>   ```json<br>   // tsconfig.json<br>   &#123;<br>     <span class="hljs-string">&quot;compilerOptions&quot;</span>: &#123;<br>       <span class="hljs-string">&quot;target&quot;</span>: <span class="hljs-string">&quot;es5&quot;</span>,<br>       <span class="hljs-string">&quot;module&quot;</span>: <span class="hljs-string">&quot;commonjs&quot;</span>,<br>       <span class="hljs-string">&quot;strict&quot;</span>: <span class="hljs-literal">true</span><br>  &#125;<br>   &#125;<br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<ol start="4">
+<li><strong>前后端分离时，请求跨域怎么办：</strong><ul>
+<li><p><strong>服务器端设置跨域头：</strong> 在后端服务器的响应中添加跨域头，允许特定的域访问资源。在 Express 中，你可以使用 <code>cors</code> 中间件来处理跨域请求。</p>
+</li>
+<li><p>Express.js（通常简称为 Express）是一款基于 Node.js 平台的 Web 应用程序框架，它提供了一系列丰富的功能来构建 Web 和移动应用。</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript">   <span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;express&#x27;</span>);<br><span class="hljs-keyword">const</span> cors = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;cors&#x27;</span>);<br>   <span class="hljs-keyword">const</span> app = <span class="hljs-title function_">express</span>();<br><br>   app.<span class="hljs-title function_">use</span>(<span class="hljs-title function_">cors</span>());<br><br>   <span class="hljs-comment">// Your routes and other middleware</span><br><br>   app.<span class="hljs-title function_">listen</span>(<span class="hljs-number">3000</span>, <span class="hljs-function">() =&gt;</span> &#123;<br>     <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Server is running on port 3000&#x27;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>代理：</strong> 在开发环境中，你可以设置代理，将前端的请求代理到后端，避免跨域问题。例如，在 Vue CLI 或 React 的 Create React App 中，你可以配置 <code>vue.config.js</code> 或 <code>package.json</code> 中的 <code>proxy</code> 字段。</p>
+ <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs json">   <span class="hljs-comment">// vue.config.js</span><br>   module.exports = <span class="hljs-punctuation">&#123;</span><br>     devServer<span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>       proxy<span class="hljs-punctuation">:</span> &#x27;http<span class="hljs-punctuation">:</span><span class="hljs-comment">//localhost:3000&#x27;</span><br>     <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span>;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>JSONP（仅限 GET 请求）：</strong> JSONP 是一种通过动态创建 <code>&lt;script&gt;</code> 标签实现跨域请求的方法。不过，它有一些限制，比如仅支持 GET 请求。</p>
+</li>
+<li><p><strong>CORS（跨域资源共享）：</strong> 在正式环境中，可以配置后端支持 CORS，允许特定的域访问资源。这需要后端和前端的配合，确保正确设置跨域请求所需的头信息。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Webpack核心概念:loader</p>
+<p>webpack 只能理解JavaScript和JSON文件(其实是Node.js)，这是 webpack 开箱可用的自带能力。loader让webpack能够去处理其他类型的文件，并将它们转换为有效模块，以供应用程序使用，以及被添加到依赖图中。</p>
+<h5 id="React开发"><a href="#React开发" class="headerlink" title="React开发"></a>React开发</h5><p>React是一个用于构建用户界面的JavaScript库，由Facebook开发和维护。它采用组件化的方式构建UI,通过虚拟DOM实现高效的页面更新。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">fuction <span class="hljs-title class_">HelloMessage</span>(props) &#123;<br>    <span class="hljs-keyword">return</span> <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello &#123;props.name&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>一个简单的React组件用类似上面的代码进行定义<br>一个React组件定义为一个function(组件名建议以大驼峰进行命名)，它接收输入的数据并返回需要展示的内容。<br>在上面return关键字后面的类似XML的写法被称为JSX，被传入的数据在组件中通过props进行访问。</p>
+<p>1．组件化: React将页面拆分成多个组件，每个组件都有自己的状态和生命周期，便于代码的复用和维护。<br>2．虚拟DOM:React通过虚拟DOM实现高效的页面更新，将修改操作转换为虚拟DOM树上的节点操作，然后批量更新DOM，减少了DOM操作的次数，提高了页面性能。</p>
+<p>3.JSX语法: React采用JSX语法，将HTML和JavaScript混合在一起<br>使得代码更加直观和易于理解。<br>4．单向数据流:React采用单向数据流的模式，数据只能从父组件传递到子组件，子组件不能直接修改父组件的数据，保<br>证了数据的可控性。<br>5．生命周期: React组件有生命周期，可以在组件的不同阶段执行相应的操作，比如组件的创建、更新、销毁等。<br>6.组件库: React有丰富的组件库，如Ant Design、Material Ul等，可以快速搭建出漂亮、易于使用的界面。<br>7.社区支持: React有庞大的社区支持，有大量的教程、文档和开源项目可供学习和使用。</p>
+<h5 id="组件与JSX语法"><a href="#组件与JSX语法" class="headerlink" title="组件与JSX语法"></a>组件与JSX语法</h5><p>解构函数</p>
+<p>解构函数是指在函数参数列表中使用解构赋值的语法。这使得你可以从传递给函数的对象或数组中提取值并将其赋给函数的参数，从而更方便地处理和使用这些值。解构函数通常用于简化代码、提高可读性以及方便地使用对象和数组的属性或元素。</p>
+<ul>
+<li>解构对象参数：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 传递对象参数</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">printUserDetails</span>(<span class="hljs-params">&#123; name, age, email &#125;</span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Name: <span class="hljs-subst">$&#123;name&#125;</span>, Age: <span class="hljs-subst">$&#123;age&#125;</span>, Email: <span class="hljs-subst">$&#123;email&#125;</span>`</span>);<br>&#125;<br><br><span class="hljs-keyword">const</span> user = &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;John Doe&#x27;</span>,<br>  <span class="hljs-attr">age</span>: <span class="hljs-number">25</span>,<br>  <span class="hljs-attr">email</span>: <span class="hljs-string">&#x27;john@example.com&#x27;</span><br>&#125;;<br><br><span class="hljs-comment">// 调用函数并传递对象参数</span><br><span class="hljs-title function_">printUserDetails</span>(user);<br></code></pre></td></tr></table></figure>
+
+<p>在上面的例子中，<code>printUserDetails</code> 函数的参数使用了对象的解构赋值，直接从传递给函数的 <code>user</code> 对象中提取了 <code>name</code>、<code>age</code> 和 <code>email</code> 属性。</p>
+<ul>
+<li>解构数组参数：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 传递数组参数</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">printNumbers</span>(<span class="hljs-params">[a, b, c]</span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`a: <span class="hljs-subst">$&#123;a&#125;</span>, b: <span class="hljs-subst">$&#123;b&#125;</span>, c: <span class="hljs-subst">$&#123;c&#125;</span>`</span>);<br>&#125;<br><br><span class="hljs-keyword">const</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><br><span class="hljs-comment">// 调用函数并传递数组参数</span><br><span class="hljs-title function_">printNumbers</span>(numbers);<br></code></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>printNumbers</code> 函数的参数使用了数组的解构赋值，直接从传递给函数的 <code>numbers</code> 数组中提取了元素。</p>
+<ul>
+<li>默认值和重命名：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 传递带有默认值的对象参数，并使用重命名</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">printUserInfo</span>(<span class="hljs-params">&#123; name, age = <span class="hljs-number">30</span>, email: userEmail &#125;</span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Name: <span class="hljs-subst">$&#123;name&#125;</span>, Age: <span class="hljs-subst">$&#123;age&#125;</span>, Email: <span class="hljs-subst">$&#123;userEmail&#125;</span>`</span>);<br>&#125;<br><br><span class="hljs-keyword">const</span> userInfo = &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>,<br>  <span class="hljs-attr">email</span>: <span class="hljs-string">&#x27;alice@example.com&#x27;</span><br>&#125;;<br><br><span class="hljs-comment">// 调用函数并传递对象参数</span><br><span class="hljs-title function_">printUserInfo</span>(userInfo);<br></code></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>printUserInfo</code> 函数的参数使用了对象的解构赋值，其中 <code>age</code> 设置了默认值，而 <code>email</code> 被重命名为 <code>userEmail</code>。</p>
+<p>解构函数使得代码更加简洁，并提高了可读性，特别是在处理复杂的对象和数组参数时。这个特性在现代 JavaScript 开发中得到广泛应用。</p>
+<h5 id="JSX语法-列表渲染"><a href="#JSX语法-列表渲染" class="headerlink" title="JSX语法-列表渲染"></a>JSX语法-列表渲染</h5><h5 id="JSX语法-条件渲染"><a href="#JSX语法-条件渲染" class="headerlink" title="JSX语法-条件渲染"></a>JSX语法-条件渲染</h5><h5 id="组件的状态和属性"><a href="#组件的状态和属性" class="headerlink" title="组件的状态和属性"></a>组件的状态和属性</h5><h5 id="组件间传值"><a href="#组件间传值" class="headerlink" title="组件间传值"></a>组件间传值</h5><h5 id="React-Hooks"><a href="#React-Hooks" class="headerlink" title="React Hooks"></a>React Hooks</h5><p>Hook，又称钩子。是React 16.8的新增属性，它可以让我们在不编写class的情况下使用state以及其他的React特性，Hook就相当于添加了内部状态的函数式组件，Hook已经目前前端的主流开发方式，Vue3中也引入了类似的特性，在后面的项目中我们会全面使用Hook。</p>
+<ul>
+<li>Hook相对于之前的Class写法有以下几点好处:</li>
+</ul>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-number">1.</span>更简单的复用组件的内部逻辑以及状态<br><span class="hljs-number">2.</span>简单的生命周期逻辑<br><span class="hljs-number">3.</span>无需使用<span class="hljs-keyword">class</span><br></code></pre></td></tr></table></figure>
+
+<p>Hook就是可以让你在函数式组件内部“钩入”React state以及生命周期等特性的函数，Hook 不能在类组件中使用。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">useState</span><br><span class="hljs-attribute">useEffect</span><br><span class="hljs-attribute">useRef</span><br><span class="hljs-attribute">useCallback</span><br><span class="hljs-attribute">useMemo</span><br></code></pre></td></tr></table></figure>
+
+<h5 id="全栈开发基础"><a href="#全栈开发基础" class="headerlink" title="全栈开发基础"></a>全栈开发基础</h5><p>01 Http协议<br>02Node.js基础<br>03 Node.js常见模块</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dos"><span class="hljs-built_in">fs</span>模块(<span class="hljs-built_in">fs</span>-extra模块)<br><span class="hljs-built_in">path</span>模块<br>http模块<br>child process模块<br>os模块<br>cluster模块<br>cross-env模块，axios模块,dateFormat模块<br></code></pre></td></tr></table></figure>
+
+<h5 id="Koa模块介绍"><a href="#Koa模块介绍" class="headerlink" title="Koa模块介绍"></a>Koa模块介绍</h5><ul>
+<li>为什么要用框架</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">Node.js原生http功能过于基础<br>路由<span class="hljs-regexp">/缓存/</span>cookie<span class="hljs-regexp">/http头/</span>状态码/静态文件等各种功能没有<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>常用web开发框架</li>
+</ul>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs x86asm">express/koa同一个团队开发<br>Egg<span class="hljs-number">.</span><span class="hljs-keyword">js</span> 基于koa,约定优于配置,多进程模型<br>NestJS基于express,高效可扩展的Node<span class="hljs-number">.</span><span class="hljs-keyword">js</span>服务端框架。对ts支持比较好。<br>Next<span class="hljs-number">.</span><span class="hljs-keyword">js</span>/Nuxt<span class="hljs-number">.</span><span class="hljs-keyword">js</span> 基于React/Vue的SSR开发框架<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>Koa模块介绍</li>
+</ul>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">App:</span>应用<br><span class="hljs-symbol">Context:</span>处理http请求上下文<br><span class="hljs-symbol">Request:</span>请求<br><span class="hljs-symbol">Response:</span>响应<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="前端面试"><a href="#前端面试" class="headerlink" title="前端面试"></a>前端面试</h5><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/605933425"></a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>前端速成</div>
+      <div>http://example.com/2023/11/14/前端速成/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lxy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月14日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/11/24/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/" title="前端项目">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">前端项目</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/12/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/" title="安卓学习">
+                        <span class="hidden-mobile">安卓学习</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"BRCAVjCFOGYFXl3TaLEgCKPw-gzGzoHsz","appKey":"DrK1oWM9eHkM39vaV6LR9oSf","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
