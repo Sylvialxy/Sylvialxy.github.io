@@ -24,7 +24,7 @@
 <meta property="og:description" content="安卓速成1 简介Android其本质就是在标准的Linux系统上增加了Java虚拟机Dalvik，并在Dalvik虚拟机上搭建了一个JAVA的application framework，所有的应用程序都是基于JAVA的application framework之上。 2 应用程序的架构设计简化了组件的重用，隐藏在每个应用后面的是一系列的服务和系统,  其中包括：  丰富而又可扩展的视图（Views">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-12T03:50:44.000Z">
-<meta property="article:modified_time" content="2023-12-29T09:04:49.667Z">
+<meta property="article:modified_time" content="2024-02-29T01:48:00.786Z">
 <meta property="article:author" content="lxy">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          8.1k 字
+          8.3k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          68 分钟
+          70 分钟
         
       </span>
     
@@ -413,7 +413,13 @@
 <uses-permission android:name="android.permission.INTERNET" />
 
 <p>网络编程一般都使用第三方的组件，很少使用自带的，</p>
-<h5 id="16-Android-消息处理机制"><a href="#16-Android-消息处理机制" class="headerlink" title="16 Android****消息处理机制"></a>16 <strong>Android****消息处理机制</strong></h5><h5 id="17-杂项开发"><a href="#17-杂项开发" class="headerlink" title="17 杂项开发"></a>17 <strong>杂项开发</strong></h5>
+<h5 id="16-Android-消息处理机制"><a href="#16-Android-消息处理机制" class="headerlink" title="16 Android****消息处理机制"></a>16 <strong>Android****消息处理机制</strong></h5><h5 id="17-杂项开发"><a href="#17-杂项开发" class="headerlink" title="17 杂项开发"></a>17 <strong>杂项开发</strong></h5><p>不知道是不是因为之前导入别人的项目，改了很多设置后，今天运行安卓模拟器跑不起来，</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">Cannot reach ADB <span class="hljs-keyword">server</span>, attempting <span class="hljs-keyword">to</span> reconnect.(moments ago)<br><br></code></pre></td></tr></table></figure>
+
+<p>尝试更换模拟器，查看SDK与API，没有问题，没有解决。</p>
+<p>最终解决：取消勾选 “Enable adb mDNS for wireless debugging”</p>
+<p>具体位置File-Settings-Build, Extension, Deployment-Debugger或者直接搜 adb</p>
+
                 
               </div>
             
