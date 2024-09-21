@@ -24,7 +24,7 @@
 <meta property="og:description" content="安卓速成1 简介Android其本质就是在标准的Linux系统上增加了Java虚拟机Dalvik，并在Dalvik虚拟机上搭建了一个JAVA的application framework，所有的应用程序都是基于JAVA的application framework之上。 2 应用程序的架构设计简化了组件的重用，隐藏在每个应用后面的是一系列的服务和系统,  其中包括：  丰富而又可扩展的视图（Views">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-12T03:50:44.000Z">
-<meta property="article:modified_time" content="2024-02-29T01:48:00.786Z">
+<meta property="article:modified_time" content="2024-09-20T03:08:13.156Z">
 <meta property="article:author" content="lxy">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          8.3k 字
+          9.4k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          70 分钟
+          79 分钟
         
       </span>
     
@@ -395,6 +395,12 @@
 <ul>
 <li>针对屏幕尺寸的差距，Fragment的出现就是为了解决这样的问题。你可以把Fragment当成Activity的一个界面的一个组成部分，甚至Activity的界面可以完全有不同的Fragment组成。</li>
 <li>fragment拥有自己的生命周期和接收、处理用户的事件，这样就不必在Activity写一堆控件的事件处理的代码了。可以动态的添加、替换和移除某个Fragment。</li>
+<li>一个页面可分为多个fragment，按钮点击动态添加fragment。</li>
+<li>事务 实现返回栈addToBackStack()</li>
+<li>Activty和Fragment的相互调用。</li>
+<li>Fragment的状态和回调（异步 回调 多线程）</li>
+<li>动态加载布局</li>
+<li></li>
 </ul>
 <h5 id="12-Android-数据存储"><a href="#12-Android-数据存储" class="headerlink" title="12 Android 数据存储"></a>12 <strong>Android</strong> <strong>数据存储</strong></h5><p>SQLite</p>
 <p>几个相关类：</p>
@@ -419,6 +425,43 @@
 <p>尝试更换模拟器，查看SDK与API，没有问题，没有解决。</p>
 <p>最终解决：取消勾选 “Enable adb mDNS for wireless debugging”</p>
 <p>具体位置File-Settings-Build, Extension, Deployment-Debugger或者直接搜 adb</p>
+<p>Fragment开发，平板模拟器竖着的。</p>
+<p>解决：平板模拟器内部的屏幕设置问题</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Sophorae/article/details/105322700">https://blog.csdn.net/Sophorae/article/details/105322700</a></p>
+<p>kotlin-android-extensions插件也被废弃了</p>
+<p>升级了Android Studio 4.1之后，发现新建项目的时候Android Studio已经不会自动帮我们引入kotlin-android-extensions插件了，需要自己手动去添加才能使用，是不是Google不再推荐使用这个插件了？</p>
+<p>《第一行代码 第3版》的另外一篇DLC：<a target="_blank" rel="noopener" href="https://blog.csdn.net/guolin_blog/article/details/113089706">https://blog.csdn.net/guolin_blog/article/details/113089706</a></p>
+<h3 id="kotlin"><a href="#kotlin" class="headerlink" title="kotlin"></a>kotlin</h3><h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5><p>关键字只有val和var</p>
+<p>不加分号</p>
+<p>变量延迟赋值时，需要显示申明变量类型</p>
+<p> if when 循环语句for in</p>
+<p>面向对象编程</p>
+<h5 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h5><p>在后台执行长时间运行操作的组件 不允许子线程进行UI操作，但有时我们必须在子线程进行一些耗时操作，然后根据任务的执行结果更新UI控件 异步消息处理机制</p>
+<ul>
+<li>解析异步消息处理机制 Message Handle MessageQueue Looper</li>
+<li>使用AsyncTask</li>
+<li>onBind 唯一的抽象方法</li>
+<li>启动和停止主要是通过Intent实现的</li>
+<li>Activity和Service进行通信 Binder</li>
+<li>前台Service</li>
+<li>多线程 Service的每个方法里面里开启一个子线程  异步的会自动停止的IntentService</li>
+</ul>
+<h5 id="Jetpack"><a href="#Jetpack" class="headerlink" title="Jetpack"></a>Jetpack</h5><ul>
+<li>开发模式 MVVM ViewModel ViewModelProvider Factory</li>
+<li>多个库组成的套件 基础 架构 行为 界面</li>
+<li>Lifecycle 感知生命周期，响应的时间问题</li>
+<li>ViewModel 管理页面数据</li>
+<li>LiveData 数据持有类 map switchMap</li>
+<li>ViewBinding 视图绑定</li>
+<li>DataBinding  数据绑定</li>
+<li>Room框架 数据库</li>
+<li>Hilt</li>
+<li>协程  CoroutineScope async await 协程作用域 withContent挂起函数 在Retrofit和架构组件里面使用协程 Flow冷流 StateFlow SharedFlow</li>
+<li>Paging</li>
+<li>Compose</li>
+</ul>
+<h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><p>都是问一些底层的运行逻辑，java相关的。</p>
+<p>很多专业术语都是英文首字母简称。</p>
 
                 
               </div>
@@ -502,9 +545,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/14/%E5%89%8D%E7%AB%AF%E9%80%9F%E6%88%90/" title="前端速成">
+                      <a href="/2023/11/24/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/" title="前端项目">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">前端速成</span>
+                        <span class="hidden-mobile">前端项目</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
