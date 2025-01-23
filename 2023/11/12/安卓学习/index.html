@@ -24,7 +24,7 @@
 <meta property="og:description" content="安卓速成1 简介Android其本质就是在标准的Linux系统上增加了Java虚拟机Dalvik，并在Dalvik虚拟机上搭建了一个JAVA的application framework，所有的应用程序都是基于JAVA的application framework之上。 2 应用程序的架构设计简化了组件的重用，隐藏在每个应用后面的是一系列的服务和系统,  其中包括：  丰富而又可扩展的视图（Views">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-12T03:50:44.000Z">
-<meta property="article:modified_time" content="2024-09-21T03:17:09.163Z">
+<meta property="article:modified_time" content="2024-10-12T02:58:39.587Z">
 <meta property="article:author" content="lxy">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          9.4k 字
+          13k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          79 分钟
+          111 分钟
         
       </span>
     
@@ -431,14 +431,51 @@
 <p>kotlin-android-extensions插件也被废弃了</p>
 <p>升级了Android Studio 4.1之后，发现新建项目的时候Android Studio已经不会自动帮我们引入kotlin-android-extensions插件了，需要自己手动去添加才能使用，是不是Google不再推荐使用这个插件了？</p>
 <p>《第一行代码 第3版》的另外一篇DLC：<a target="_blank" rel="noopener" href="https://blog.csdn.net/guolin_blog/article/details/113089706">https://blog.csdn.net/guolin_blog/article/details/113089706</a></p>
-<h3 id="kotlin"><a href="#kotlin" class="headerlink" title="kotlin"></a>kotlin</h3><h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5><p>关键字只有val和var</p>
+<h3 id="kotlin"><a href="#kotlin" class="headerlink" title="kotlin"></a>kotlin</h3><h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5><p>关键字只有val和var</p>
 <p><code>lateinit</code> 是一种延迟初始化方式，必须在使用前初始化</p>
 <p><code>lazy</code> 是一种懒加载方式，会在第一次访问时初始化</p>
 <p>不加分号</p>
 <p>变量延迟赋值时，需要显示申明变量类型</p>
-<p> if when 循环语句for in</p>
-<p>面向对象编程</p>
-<h5 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h5><p>在后台执行长时间运行操作的组件 不允许子线程进行UI操作，但有时我们必须在子线程进行一些耗时操作，然后根据任务的执行结果更新UI控件 异步消息处理机制</p>
+<h5 id="逻辑控制"><a href="#逻辑控制" class="headerlink" title="逻辑控制"></a>逻辑控制</h5><ul>
+<li>if 可以有返回值</li>
+</ul>
+<p>语法糖 函数只有一行代码使用 省略函数体 等号连接在函数尾部。</p>
+<ul>
+<li>when 箭头</li>
+</ul>
+<p>匹配值-&gt;{执行逻辑}</p>
+<p>is 关键字类型匹配</p>
+<ul>
+<li>循环语句for in</li>
+</ul>
+<p>val range&#x3D;0..10 .. 关键字闭区间</p>
+<p>val range&#x3D;0 until 10 左闭右开</p>
+<p>step 跳过元素</p>
+<p>downTo降序</p>
+<h5 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h5><ul>
+<li>类和对象</li>
+</ul>
+<p>类似Java 去掉new关键字</p>
+<ul>
+<li>继承与构造函数</li>
+</ul>
+<p>非抽象类默认不可继承 加上open关键字</p>
+<p>继承：Java使用extends Kotlin使用：</p>
+<p>主构造函数：没有函数体 使用init结构体编写逻辑</p>
+<p>次构造函数：几乎用不到，Kotlin提供了一个给函数设定参数默认值的功能</p>
+<h5 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h5><ul>
+<li><p>多态</p>
+</li>
+<li><p>可见性修饰符：</p>
+</li>
+</ul>
+<p>Java：public\private\protected\default</p>
+<p>Kotlin:public\private\protected\internal</p>
+<h5 id="数据类与单例类"><a href="#数据类与单例类" class="headerlink" title="数据类与单例类"></a>数据类与单例类</h5><p>关键字：data</p>
+<p>单例类：避免创建重复的对象，使用object关键字</p>
+<h5 id="Lambda编程"><a href="#Lambda编程" class="headerlink" title="Lambda编程"></a>Lambda编程</h5><p>集合的创建与遍历：内置listOf()函数 创建的是不可变集合</p>
+<p>mutableListOf()</p>
+<h4 id="Activity"><a href="#Activity" class="headerlink" title="Activity"></a>Activity</h4><h4 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h4><h4 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h4><h4 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h4><h4 id="数据存储技术"><a href="#数据存储技术" class="headerlink" title="数据存储技术"></a>数据存储技术</h4><h4 id="跨程序共享数据"><a href="#跨程序共享数据" class="headerlink" title="跨程序共享数据"></a>跨程序共享数据</h4><h4 id="手机多媒体"><a href="#手机多媒体" class="headerlink" title="手机多媒体"></a>手机多媒体</h4><h4 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h4><p>在后台执行长时间运行操作的组件 不允许子线程进行UI操作，但有时我们必须在子线程进行一些耗时操作，然后根据任务的执行结果更新UI控件 异步消息处理机制。通常，协程足以处理大多数异步任务，尤其是 UI 相关的任务。但有些场景下，<code>Service</code> 和协程可能需要结合使用：前台服务和<strong>绑定服务（Bound Service）</strong>：如果你的应用中有多个组件需要与 <code>Service</code> 交互，并且需要执行后台任务，你可以在 <code>Service</code> 中使用协程来简化异步操作。</p>
 <ul>
 <li>解析异步消息处理机制 Message Handle MessageQueue Looper</li>
 <li>使用AsyncTask</li>
@@ -448,22 +485,199 @@
 <li>前台Service</li>
 <li>多线程 Service的每个方法里面里开启一个子线程  异步的会自动停止的IntentService</li>
 </ul>
-<h5 id="Jetpack"><a href="#Jetpack" class="headerlink" title="Jetpack"></a>Jetpack</h5><ul>
-<li>开发模式 MVVM ViewModel ViewModelProvider Factory</li>
-<li>多个库组成的套件 基础 架构 行为 界面</li>
-<li>Lifecycle 感知生命周期，响应的时间问题</li>
-<li>ViewModel 管理页面数据</li>
-<li>LiveData 数据持有类 map switchMap</li>
-<li>ViewBinding 视图绑定</li>
-<li>DataBinding  数据绑定</li>
-<li>Room框架 数据库</li>
-<li>Hilt</li>
-<li>协程  CoroutineScope async await 协程作用域 withContent挂起函数 在Retrofit和架构组件里面使用协程 Flow冷流 StateFlow SharedFlow</li>
-<li>Paging</li>
-<li>Compose</li>
-</ul>
-<h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><p>都是问一些底层的运行逻辑，java相关的。</p>
+<h4 id="网络技术"><a href="#网络技术" class="headerlink" title="网络技术"></a>网络技术</h4><h4 id="Material-Design"><a href="#Material-Design" class="headerlink" title="Material Design"></a>Material Design</h4><h4 id="Jetpack"><a href="#Jetpack" class="headerlink" title="Jetpack"></a>Jetpack</h4><h5 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h5><p> MVVM ViewModel ViewModelProvider Factory</p>
+<p>多个库组成的套件 基础 架构 行为 界面</p>
+<h5 id="Lifecycle"><a href="#Lifecycle" class="headerlink" title="Lifecycle"></a>Lifecycle</h5><p>感知生命周期，响应的时间问题</p>
+<h5 id="ViewModel"><a href="#ViewModel" class="headerlink" title="ViewModel"></a>ViewModel</h5><p>管理页面数据</p>
+<h5 id="LiveData"><a href="#LiveData" class="headerlink" title="LiveData"></a>LiveData</h5><p>数据持有类 map switchMap</p>
+<h5 id="ViewBinding"><a href="#ViewBinding" class="headerlink" title="ViewBinding"></a>ViewBinding</h5><p>视图绑定</p>
+<h5 id="DataBinding"><a href="#DataBinding" class="headerlink" title="DataBinding"></a>DataBinding</h5><p>数据绑定</p>
+<h5 id="Room框架"><a href="#Room框架" class="headerlink" title="Room框架"></a>Room框架</h5><p>数据库</p>
+<h5 id="Hilt"><a href="#Hilt" class="headerlink" title="Hilt"></a>Hilt</h5><p>依赖注入</p>
+<h5 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h5><p>CoroutineScope async await 协程作用域 </p>
+<p>withContent挂起函数 </p>
+<p>在Retrofit和架构组件里面使用协程 </p>
+<p>Flow 数据流flow以协程为基础构建，可以按顺序发出多个值。冷流 StateFlow SharedFlow</p>
+<p>Paging</p>
+<h5 id="Compose"><a href="#Compose" class="headerlink" title="Compose"></a>Compose</h5><h3 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h3><p>都是问一些底层的运行逻辑，java相关的。</p>
 <p>很多专业术语都是英文首字母简称。</p>
+<p>以下是一些常见的安卓面试问题及其答案总结，涵盖了基础、中级和高级三个层次，帮助你在面试中更好地准备和表现。</p>
+<hr>
+<h3 id="基础问题及答案"><a href="#基础问题及答案" class="headerlink" title="基础问题及答案"></a><strong>基础问题及答案</strong></h3><ol>
+<li><p><strong>Activity的生命周期？</strong></p>
+<ul>
+<li><strong>答案</strong>：<br>Activity生命周期包含<code>onCreate()</code>、<code>onStart()</code>、<code>onResume()</code>、<code>onPause()</code>、<code>onStop()</code>和<code>onDestroy()</code>等方法。<ul>
+<li>**<code>onCreate()</code>**：初始化Activity，加载布局文件。</li>
+<li>**<code>onStart()</code>**：Activity进入前台，但还无法与用户交互。</li>
+<li>**<code>onResume()</code>**：Activity开始与用户交互。</li>
+<li>**<code>onPause()</code>**：Activity失去焦点，但仍可见。</li>
+<li>**<code>onStop()</code>**：Activity不可见。</li>
+<li>**<code>onDestroy()</code>**：Activity被销毁，释放资源。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Fragment与Activity的区别？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>Fragment</strong>：Fragment是Activity中的一个可重用UI组件，常用于动态UI和多屏适配。Fragment的生命周期与其宿主Activity密切相关，使用时需要通过FragmentManager进行管理。</li>
+<li><strong>Activity</strong>：Activity是安卓应用的基本组成单元，表示一个单独的UI页面，拥有独立的生命周期。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Intent与Bundle的区别？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>Intent</strong>：Intent用于启动Activity、Service、BroadcastReceiver等，它可以携带数据。</li>
+<li><strong>Bundle</strong>：Bundle是一种轻量级的数据存储结构，通常用于在Activity之间传递数据。Intent中可以携带Bundle作为额外数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>RecyclerView与ListView的区别？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>RecyclerView</strong>：RecyclerView是ListView的替代品，支持更加灵活的布局管理器（LayoutManager），并提供了View的回收机制，提高了性能。</li>
+<li><strong>ListView</strong>：ListView只能垂直滚动，性能较低，特别是对于复杂或大量的数据。</li>
+<li><strong>RecyclerView优势</strong>：支持自定义布局管理器（线性、网格、瀑布流），Item动画和高效的ViewHolder复用机制。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Android中的四大组件是什么？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>Activity</strong>：用户界面的单个屏幕。</li>
+<li><strong>Service</strong>：用于在后台执行长时间运行的操作。</li>
+<li><strong>BroadcastReceiver</strong>：监听系统广播事件并做出响应。</li>
+<li><strong>ContentProvider</strong>：用于在不同应用之间共享数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="中级问题及答案"><a href="#中级问题及答案" class="headerlink" title="中级问题及答案"></a><strong>中级问题及答案</strong></h3><ol>
+<li><p><strong>Jetpack中的ViewModel是什么？它的作用是什么？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>ViewModel</strong>：ViewModel是Jetpack组件之一，用于保存UI相关的数据，保证即使在配置变化（如屏幕旋转）时，数据依然不会丢失。它的生命周期独立于Activity和Fragment的生命周期。</li>
+<li><strong>作用</strong>：避免Activity或Fragment被重建时数据丢失，优化UI更新逻辑。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>如何使用Kotlin协程处理异步任务？</strong></p>
+<ul>
+<li><strong>答案</strong>：<br>Kotlin协程提供了一种轻量级的异步编程方式，主要通过<code>launch</code>、<code>async</code>、<code>await</code>等函数实现。<ul>
+<li>使用<code>CoroutineScope.launch</code>在主线程或后台线程执行异步任务。</li>
+<li><code>withContext(Dispatchers.IO)</code>用于切换到IO线程处理耗时任务。</li>
+<li><code>GlobalScope.launch</code>会启动一个全局协程，而<code>lifecycleScope</code>或<code>viewModelScope</code>绑定到特定生命周期，更适合Activity或ViewModel中的异步任务。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Room数据库的优点是什么？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>Room</strong>是安卓的对象关系映射（ORM）库，简化了SQLite的使用。</li>
+<li><strong>优势</strong>：<ul>
+<li>提供了类型安全的查询。</li>
+<li>自动处理数据库升级和迁移。</li>
+<li>支持LiveData和Flow，方便进行响应式数据更新。</li>
+<li>减少手动编写SQL代码，防止常见的SQL错误。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>如何避免内存泄漏？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>Context泄漏</strong>：避免在长生命周期的对象（如单例类）中持有Activity的引用，使用<code>ApplicationContext</code>代替<code>ActivityContext</code>。</li>
+<li><strong>Handler泄漏</strong>：及时移除消息队列中的任务，避免任务持有Activity或Fragment的引用。</li>
+<li><strong>AsyncTask泄漏</strong>：AsyncTask应与生命周期绑定，避免任务在Activity销毁后仍在运行。</li>
+<li>使用第三方工具如<code>LeakCanary</code>检测内存泄漏。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>如何处理Fragment与Activity之间的数据通信？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>使用Bundle传递数据</strong>：通过<code>setArguments(Bundle)</code>在Fragment之间传递数据。</li>
+<li><strong>ViewModel共享数据</strong>：通过<code>ViewModel</code>在Activity和Fragment之间共享数据，特别是使用<code>SharedViewModel</code>来实现多个Fragment之间的数据同步。</li>
+<li><strong>接口回调机制</strong>：在Fragment中定义接口，由Activity实现接口，Fragment通过回调将数据传递给Activity。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="高级问题及答案"><a href="#高级问题及答案" class="headerlink" title="高级问题及答案"></a><strong>高级问题及答案</strong></h3><ol>
+<li><p><strong>多线程与并发处理，如何保证UI线程不被阻塞？</strong></p>
+<ul>
+<li><strong>答案</strong>：<br>在安卓中，多线程处理通常依赖于<code>Handler</code>、<code>AsyncTask</code>、<code>Thread</code>等机制，现代应用更多使用Kotlin协程。<ul>
+<li><strong>Handler</strong>：用于向主线程发送消息，在指定时机执行任务。</li>
+<li><strong>AsyncTask（已废弃）</strong>：用于在后台线程执行耗时任务，并将结果回传给UI线程。</li>
+<li><strong>协程</strong>：使用<code>launch(Dispatchers.IO)</code>将耗时操作放在后台线程执行，确保UI线程不会阻塞。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>请解释一下MVVM架构模式，以及其优势？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>MVVM</strong>（Model-View-ViewModel）是安卓常用的架构模式。<ul>
+<li><strong>Model</strong>：数据层，负责数据的获取、处理和存储。</li>
+<li><strong>View</strong>：UI层，展示数据。</li>
+<li><strong>ViewModel</strong>：连接Model与View的桥梁，负责业务逻辑和数据处理。通过<code>LiveData</code>或<code>Flow</code>将数据与UI绑定，实现响应式更新。</li>
+</ul>
+</li>
+<li><strong>优势</strong>：<ul>
+<li>UI和业务逻辑分离，降低耦合性。</li>
+<li>数据和UI的双向绑定（通过<code>DataBinding</code>）简化了UI更新。</li>
+<li>易于进行单元测试。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>如何优化安卓应用的启动时间？</strong></p>
+<ul>
+<li><strong>答案</strong>：<ul>
+<li><strong>延迟初始化</strong>：将不必要的初始化操作延迟到Activity启动完成后进行。</li>
+<li><strong>使用Splash Screen</strong>：在启动时使用轻量的启动页，减少主界面的加载时间。</li>
+<li><strong>优化资源加载</strong>：减少布局文件嵌套，使用异步加载图像或其他资源。</li>
+<li><strong>冷启动优化</strong>：减少Application中的全局初始化操作，使用<code>lazy</code>初始化来推迟不必要的初始化。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>安卓中的事件分发机制是如何运作的？</strong></p>
+<ul>
+<li><strong>答案</strong>：<br>安卓事件分发机制依赖于<code>dispatchTouchEvent()</code>、<code>onInterceptTouchEvent()</code>和<code>onTouchEvent()</code>方法。<ul>
+<li>**<code>dispatchTouchEvent()</code>**：将触摸事件分发给当前View及其子View。</li>
+<li>**<code>onInterceptTouchEvent()</code>**：在ViewGroup中决定是否拦截触摸事件。</li>
+<li>**<code>onTouchEvent()</code>**：在子View中处理具体的触摸事件，如点击、滑动等。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>什么是Dagger或Hilt，如何在Android中使用依赖注入？</strong></p>
+<ul>
+<li><strong>答案</strong>：<br><strong>Dagger</strong>和<strong>Hilt</strong>是Android中常用的依赖注入框架，Hilt是Dagger的简化版。<ul>
+<li><strong>依赖注入</strong>：依赖注入是一种设计模式，Dagger和Hilt可以自动管理对象的创建和依赖关系。</li>
+<li><strong>Hilt的使用</strong>：通过<code>@Inject</code>注解构造函数和依赖，使用<code>@Module</code>和<code>@Provides</code>注解提供实例，<code>@Singleton</code>管理单例。</li>
+<li><strong>优势</strong>：减少手动依赖的创建，使代码更清晰、模块化，有助于测试。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 
                 
               </div>
@@ -556,12 +770,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2023/11/12/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
